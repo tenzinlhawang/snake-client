@@ -1,5 +1,4 @@
 const { time } = require('console');
-let timer = 0;
 const net = require('net');
 
 const connect = function() {
@@ -19,14 +18,14 @@ const connect = function() {
     console.log('Connection established');
     conn.write('Name: TLP');
 
-    setTimeout(() => {
-      conn.write('Move: up');
-    }, timer);
-    timer += 500;
+    // setTimeout(() => {
+    //   conn.write('Move: up');
+    // }, timer);
+    // timer += 500;
 
     setInterval(() => {
       conn.write('Move: up');
-    }, timer);   
+    }, 50);   
 
 
   })
